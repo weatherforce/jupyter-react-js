@@ -1,16 +1,3 @@
-var webpack = require('webpack');
-
-const babelSettings = {
-  plugins: [
-    'transform-flow-strip-types',
-    'add-module-exports',
-    'transform-regenerator',
-    'transform-decorators-legacy'
-  ],
-  presets: [ 'es2015', 'react', 'stage-1' ]
-};
-
-
 module.exports = [
     {
       entry: './src/index.js',
@@ -34,11 +21,16 @@ module.exports = [
         }
       },
       module : {
-        loaders : [
+        rules : [
           {
             test: /\.js?$/,
             exclude: /(node_modules)/,
-            loaders: [`babel?${JSON.stringify( babelSettings )}`]
+			use: {
+				loader: 'babel-loader',
+				options:{
+					presets: ['@babel/preset-env']
+				}
+			}
           }
         ]
       }
