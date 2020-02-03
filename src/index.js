@@ -1,8 +1,8 @@
-const Output = require('./output');
-const Component = require('./component');
-
 import React from 'react';
 import ReactDom from 'react-dom';
+import Output from './output';
+import Component from './component'
+
 
 function createOutputArea( cell, target ) {
   if ( !cell.react_output ) {
