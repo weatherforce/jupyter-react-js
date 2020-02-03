@@ -25,6 +25,7 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
+    "@jupyterlab/services": "^4.2.0",
     "babel-cli": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
