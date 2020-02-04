@@ -1,11 +1,12 @@
+const path = require('path');
+
 module.exports = [
     {
-      entry: './src/index.js',
+      entry: path.resolve(__dirname ,'src/index.js'),
       output: {
           filename: 'index.js',
-          path: './',
-          libraryTarget: 'amd'
-      },
+          path: path.resolve(__dirname , '.'),
+      },/*
       externals: {
         react: {
             root: 'React',
@@ -19,7 +20,7 @@ module.exports = [
             commonjs: 'react-dom',
             amd: 'react-dom'
         }
-      },
+      },*/
       module : {
         rules : [
           {
@@ -27,11 +28,8 @@ module.exports = [
             exclude: /(node_modules)/,
 			use: {
 				loader: 'babel-loader',
-				options:{
-					presets: ['@babel/preset-env']
-				}
 			}
-          }
+			}
         ]
       }
     }
