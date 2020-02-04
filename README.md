@@ -90,3 +90,17 @@ The primary entry point for all jupyter-react-js components is the `JupyterReact
 * componentParams - an object containing optional params that will be passed to Jupyter-React-Js components. The 'components' key is required and are the actual react components renderable by the comms. Other valid params include:
     * save: whether or not the notebook should remember the component after page refreshes. Defaults to false.
     * element: a DOM element the component should render to. 
+
+
+## Development Install 
+
+First thing first, clone repo, install npm package with its dependencies, go to example, create a python3 virtual environment, activate it then install notebook package. 
+
+	git clone git@github.com:weatherforce/jupyter-react-js.git
+	npm install 
+	cd example/
+	python3 -m virtualenv venv
+	source venv/bin/activate
+	pip install notebook
+
+
