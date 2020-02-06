@@ -1,6 +1,6 @@
 node_modules
 package-lock.json
-index.js
+./index.js
 yarn.lock
 *venv/
 *.ipynb_checkpoints/
